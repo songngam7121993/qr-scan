@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="12dp">
+
+    <androidx.camera.view.PreviewView android:id="@+id/previewView"
+        android:layout_width="match_parent" android:layout_height="260dp" />
+
+    <TextView android:id="@+id/tvStatus" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:padding="6dp"
+        android:text="Sẵn sàng quét" android:textStyle="bold" />
+
+    <EditText android:id="@+id/etUrl" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:inputType="textUri"
+        android:hint="Link Web App (Apps Script)" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText android:id="@+id/etSheet" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="2"
+            android:hint="Tên sheet (trống = sheet đầu)" android:inputType="text" />
+        <EditText android:id="@+id/etCol" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:hint="Cột" android:text="A" android:inputType="textCapCharacters" />
+        <EditText android:id="@+id/etRow" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:hint="Dòng" android:text="2" android:inputType="number" />
+    </LinearLayout>
+
+    <Button android:id="@+id/btnPause" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Tạm dừng quét" />
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView android:id="@+id/tvLog" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:padding="6dp" />
+    </ScrollView>
+</LinearLayout>
